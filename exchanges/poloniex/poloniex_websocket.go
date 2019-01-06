@@ -198,7 +198,7 @@ func (p *Poloniex) WsHandleData() {
 				p.Websocket.DataHandler <- exchange.TickerData{
 					Timestamp: time.Now(),
 					Exchange:  p.GetName(),
-					AssetType: "SPOT",
+					AssetType: "Spot",
 					LowPrice:  t.LowestAsk,
 					HighPrice: t.HighestBid,
 				}
