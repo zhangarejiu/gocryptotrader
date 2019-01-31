@@ -186,11 +186,7 @@ func (z *ZB) GetAccountInformation() (AccountsResponse, error) {
 	vals.Set("accesskey", z.APIKey)
 	vals.Set("method", "getAccountInfo")
 
-	err := z.SendAuthenticatedHTTPRequest("GET", vals, &result)
-	if err != nil {
-		return result, err
-	}
-	return result, nil
+	return result, z.SendAuthenticatedHTTPRequest("GET", vals, &result)
 }
 
 // GetUnfinishedOrdersIgnoreTradeType returns unfinished orders
@@ -204,11 +200,7 @@ func (z *ZB) GetUnfinishedOrdersIgnoreTradeType(currency, pageindex, pagesize st
 	vals.Set("pageSize", pagesize)
 
 	err := z.SendAuthenticatedHTTPRequest("GET", vals, &result)
-	if err != nil {
-		return result, err
-	}
-
-	return result, nil
+	return result, err
 }
 
 // GetMarkets returns market information including pricing, symbols and
@@ -254,11 +246,7 @@ func (z *ZB) GetTicker(symbol string) (TickerResponse, error) {
 	var res TickerResponse
 
 	err := z.SendHTTPRequest(url, &res)
-	if err != nil {
-		return res, err
-	}
-
-	return res, nil
+	return res, err
 }
 
 // GetTickers returns ticker data for all supported symbols
@@ -267,11 +255,7 @@ func (z *ZB) GetTickers() (map[string]TickerChildResponse, error) {
 	resp := make(map[string]TickerChildResponse)
 
 	err := z.SendHTTPRequest(url, &resp)
-	if err != nil {
-		return resp, err
-	}
-
-	return resp, nil
+	return resp, err
 }
 
 // GetOrderbook returns the orderbook for a given symbol

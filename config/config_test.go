@@ -48,7 +48,7 @@ func TestUpdateExchangeBankAccounts(t *testing.T) {
 	var count int
 	for _, exch := range cfg.Exchanges {
 		if exch.Name == "Bitfinex" {
-			if exch.BankAccounts[0].Enabled == false {
+			if !exch.BankAccounts[0].Enabled {
 				count++
 			}
 		}
@@ -103,7 +103,7 @@ func TestUpdateClientBankAccounts(t *testing.T) {
 	var count int
 	for _, bank := range cfg.BankAccounts {
 		if bank.BankName == b.BankName {
-			if bank.Enabled == false {
+			if !bank.Enabled {
 				count++
 			}
 		}

@@ -141,7 +141,7 @@ func TestSetAutoPairDefaults(t *testing.T) {
 		t.Fatalf("Test failed. TestSetAutoPairDefaults load config failed. Error %s", err)
 	}
 
-	if exch.SupportsAutoPairUpdates != false {
+	if exch.SupportsAutoPairUpdates {
 		t.Fatal("Test failed. TestSetAutoPairDefaults Incorrect value")
 	}
 
@@ -155,7 +155,7 @@ func TestSetAutoPairDefaults(t *testing.T) {
 		t.Fatalf("Test failed. TestSetAutoPairDefaults load config failed. Error %s", err)
 	}
 
-	if exch.SupportsAutoPairUpdates == false {
+	if !exch.SupportsAutoPairUpdates {
 		t.Fatal("Test failed. TestSetAutoPairDefaults Incorrect value")
 	}
 
