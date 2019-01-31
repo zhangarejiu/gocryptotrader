@@ -1080,7 +1080,7 @@
    ]
   },
   {
-   "name": "OKCOIN China",
+   "name": "OKCOIN",
    "enabled": true,
    "verbose": false,
    "websocket": false,
@@ -1103,47 +1103,6 @@
    "pairsLastUpdated": 1545884823,
    "configCurrencyPairFormat": {
     "uppercase": true
-   },
-   "requestCurrencyPairFormat": {
-    "uppercase": false,
-    "delimiter": "_"
-   },
-   "bankAccounts": [
-    {
-     "bankName": "",
-     "bankAddress": "",
-     "accountName": "",
-     "accountNumber": "",
-     "swiftCode": "",
-     "iban": "",
-     "supportedCurrencies": ""
-    }
-   ]
-  },
-  {
-   "name": "OKCOIN International",
-   "enabled": true,
-   "verbose": false,
-   "websocket": false,
-   "useSandbox": false,
-   "restPollingDelay": 10,
-   "httpTimeout": 15000000000,
-   "httpUserAgent": "",
-   "authenticatedApiSupport": false,
-   "apiKey": "Key",
-   "apiSecret": "Secret",
-   "apiUrl": "NON_DEFAULT_HTTP_LINK_TO_EXCHANGE_API",
-   "apiUrlSecondary": "NON_DEFAULT_HTTP_LINK_TO_EXCHANGE_API",
-   "proxyAddress": "",
-   "websocketUrl": "NON_DEFAULT_HTTP_LINK_TO_WEBSOCKET_EXCHANGE_API",
-   "availablePairs": "BTC_USD,LTC_USD,ETH_USD,ETC_USD,TUSD_USD,ETH_BTC,ETC_BTC,TUSD_BTC,LTC_BTC,USDT_BTC,ZEC_BTC,ADA_BTC,XLM_BTC,ZRX_BTC,XRP_BTC,BAT_BTC,PAX_BTC,GUSD_BTC,USDC_BTC,BCHABC_BTC,BCHSV_BTC,TUSD_ETH,ETC_ETH,LTC_ETH,USDT_ETH,ZEC_ETH,ADA_ETH,XLM_ETH,ZRX_ETH,XRP_ETH,BAT_ETH,USDT_USD,ZEC_USD,ADA_USD,XLM_USD,ZRX_USD,XRP_USD,BAT_USD,PAX_USD,GUSD_USD,USDC_USD,BCHABC_USD,BCHSV_USD",
-   "enabledPairs": "BTC_USD",
-   "baseCurrencies": "USD",
-   "assetTypes": "SPOT",
-   "supportsAutoPairUpdates": true,
-   "configCurrencyPairFormat": {
-    "uppercase": true,
-    "delimiter": "_"
    },
    "requestCurrencyPairFormat": {
     "uppercase": false,
